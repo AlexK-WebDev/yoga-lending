@@ -77,6 +77,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: "OpenSans", sans-serif;
+  color: #484f5b;
 }
 
 body._lock {
@@ -86,7 +87,6 @@ body._lock {
 .text {
   font-size: 20.8px;
   letter-spacing: 0.01312rem;
-  color: #484f5b;
 }
 
 @media (max-width: 1255px) {
@@ -95,12 +95,37 @@ body._lock {
   }
 }
 
+.title {
+  font-size: 75px;
+  font-weight: bold;
+  letter-spacing: 0.75px;
+  text-align: left;
+}
+
+.btn {
+  display: block;
+  font-size: 20.8px;
+  letter-spacing: 0.01312rem;
+  font-weight: bold;
+  line-height: 1.6;
+  text-align: center;
+  background: #e6c8c3;
+  padding: 0.875rem 0px 0.875rem 0px;
+  width: 12.6875rem;
+}
+
+@media (max-width: 1255px) {
+  .btn {
+    font-size: calc(16px + 4.8 * ((100vw - 320px) / 935));
+  }
+}
+
 .header {
   position: fixed;
   width: 100%;
-  background: lightgrey;
   padding-top: 27px;
   padding-bottom: 27px;
+  min-height: 85px;
 }
 
 @media (max-width: 1255px) {
@@ -346,5 +371,76 @@ body._touch .menu__arrow {
     flex: 1 1 100%;
     margin: 10px 0 0 0;
     display: none;
+  }
+}
+
+.main {
+  background: url(../../img/main/back-bg.png) center center/contain no-repeat;
+  padding-top: 85px;
+  border: 1px solid red;
+}
+
+.main__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 38px;
+  padding-top: 85px;
+}
+
+@media (max-width: 1255px) {
+  .main__row {
+    padding-bottom: calc(15px + 23 * ((100vw - 320px) / 935));
+  }
+}
+
+@media (max-width: 1255px) {
+  .main__row {
+    padding-top: calc(45px + 40 * ((100vw - 320px) / 935));
+  }
+}
+
+.main__image {
+  margin-right: 148px;
+}
+
+@media (max-width: 1255px) {
+  .main__image {
+    margin-right: calc(80px + 68 * ((100vw - 320px) / 935));
+  }
+}
+
+.main__title {
+  margin-bottom: 66px;
+}
+
+@media (max-width: 1255px) {
+  .main__title {
+    margin-bottom: calc(35px + 31 * ((100vw - 320px) / 935));
+  }
+}
+
+.main__text {
+  margin-bottom: 82px;
+}
+
+@media (max-width: 1255px) {
+  .main__text {
+    margin-bottom: calc(40px + 42 * ((100vw - 320px) / 935));
+  }
+}
+
+.btn-link {
+  font-size: 20.8px;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 0.21px;
+  text-align: center;
+  color: #484f5b;
+}
+
+@media (max-width: 1255px) {
+  .btn-link {
+    font-size: calc(16px + 4.8 * ((100vw - 320px) / 935));
   }
 }
