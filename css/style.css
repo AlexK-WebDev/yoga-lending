@@ -79,6 +79,10 @@ body {
   font-family: "OpenSans", sans-serif;
 }
 
+body._lock {
+  overflow: hidden;
+}
+
 .text {
   font-size: 20.8px;
   letter-spacing: 0.01312rem;
@@ -108,6 +112,25 @@ body {
 @media (max-width: 1255px) {
   .header {
     padding-bottom: calc(15px + 12 * ((100vw - 320px) / 935));
+  }
+}
+
+@media (max-width: 1457) {
+  .header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 1457) and (max-width: 1255px) {
+  .header {
+    padding-left: calc(10px + 5 * ((100vw - 320px) / 935));
+  }
+}
+
+@media (max-width: 1457) and (max-width: 1255px) {
+  .header {
+    padding-right: calc(10px + 5 * ((100vw - 320px) / 935));
   }
 }
 
@@ -234,6 +257,12 @@ body._touch .menu__arrow {
 }
 
 @media (max-width: 767.98px) {
+  .header {
+    padding: 0 15px;
+  }
+  .logo {
+    z-index: 5;
+  }
   .menu__icon {
     z-index: 5;
     display: block;
@@ -247,7 +276,7 @@ body._touch .menu__arrow {
     left: 0;
     height: 10%;
     width: 100%;
-    transition: all 0.3s ease 0s;
+    transition: all 0.5s ease 0s;
     background-color: #484f5b;
   }
   .menu__icon::before, .menu__icon::after {
@@ -263,16 +292,40 @@ body._touch .menu__arrow {
     top: 50%;
     transform: scale(1) translate(0px, -50%);
   }
+  .menu__icon._active span {
+    transform: scale(0) translate(0px, -50%);
+  }
+  .menu__icon._active::before {
+    top: 50%;
+    transform: rotate(-315deg) translate(0px, -50%);
+  }
+  .menu__icon._active::after {
+    bottom: 50%;
+    transform: rotate(315deg) translate(0px, 50%);
+  }
   .menu__body {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -100%;
     width: 100%;
     height: 100%;
     background-color: #d3d3d3cc;
     padding: 100px 30px 30px 30px;
     transition: left 0.3s ease 0s;
     overflow: auto;
+  }
+  .menu__body::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 80px;
+    background: #d3d3d3;
+    z-index: 2;
+  }
+  .menu__body._active {
+    left: 0;
   }
   .menu__list > li {
     flex-wrap: wrap;
