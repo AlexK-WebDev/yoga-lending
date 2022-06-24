@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 1457px) {
   .container {
     padding: 0 15px;
   }
@@ -515,5 +515,59 @@ body._touch .menu__arrow {
 @media (max-width: 1255px) {
   .btn-link {
     font-size: calc(16px + 4.8 * ((100vw - 320px) / 935));
+  }
+}
+
+.about {
+  background: url(../../img/about/bg.webp) center center/cover no-repeat;
+  padding-top: 184px;
+  padding-bottom: 175px;
+}
+
+@media (max-width: 1255px) {
+  .about {
+    padding-top: calc(35px + 149 * ((100vw - 320px) / 935));
+  }
+}
+
+@media (max-width: 1255px) {
+  .about {
+    padding-bottom: calc(35px + 140 * ((100vw - 320px) / 935));
+  }
+}
+
+.about__row {
+  display: flex;
+  width: 100%;
+}
+
+.about__row .about__body {
+  flex: 0 0 50%;
+}
+
+.about__title {
+  margin-bottom: 66px;
+}
+
+@media (max-width: 1255px) {
+  .about__title {
+    margin-bottom: calc(35px + 31 * ((100vw - 320px) / 935));
+  }
+}
+
+@media (max-width: 1457px) {
+  .about__title {
+    text-align: start;
+  }
+}
+
+.about__text {
+  margin-bottom: 82px;
+  max-width: 543px;
+}
+
+@media (max-width: 1255px) {
+  .about__text {
+    margin-bottom: calc(40px + 42 * ((100vw - 320px) / 935));
   }
 }
