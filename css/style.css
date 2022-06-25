@@ -125,6 +125,7 @@ body._lock {
   font-size: 20.8px;
   letter-spacing: 0.01312rem;
   font-weight: bold;
+  text-transform: uppercase;
   line-height: 1.6;
   text-align: center;
   background: #e6c8c3;
@@ -634,10 +635,12 @@ body._touch .menu__arrow {
   height: 206px;
   flex: 1 1 auto;
   position: relative;
+  z-index: -2;
 }
 
 .card-bg {
   position: absolute;
+  z-index: -2;
 }
 
 .item-title {
@@ -657,5 +660,98 @@ body._touch .menu__arrow {
 @media (max-width: 1255px) {
   .item-title {
     margin-top: calc(15px + 20 * ((100vw - 320px) / 935));
+  }
+}
+
+.programs-bottom {
+  background: url(../../img/programms/bg.png) center center/cover no-repeat;
+  padding-top: 83px;
+  padding-bottom: 110px;
+}
+
+@media (max-width: 1255px) {
+  .programs-bottom {
+    padding-top: calc(30px + 53 * ((100vw - 320px) / 935));
+  }
+}
+
+@media (max-width: 1255px) {
+  .programs-bottom {
+    padding-bottom: calc(30px + 80 * ((100vw - 320px) / 935));
+  }
+}
+
+.programs-bottom__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 992.98px) {
+  .programs-bottom__row {
+    flex-wrap: wrap;
+  }
+}
+
+.programs-bottom__body {
+  margin-right: 80px;
+}
+
+@media (max-width: 1255px) {
+  .programs-bottom__body {
+    margin-right: calc(20px + 60 * ((100vw - 320px) / 935));
+  }
+}
+
+@media (max-width: 992.98px) {
+  .programs-bottom__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+  .programs-bottom__body .programs-bottom__title {
+    max-width: 100%;
+  }
+}
+
+.programs-bottom__title {
+  font-size: 58.5px;
+  max-width: 455px;
+}
+
+@media (max-width: 1255px) {
+  .programs-bottom__title {
+    font-size: calc(25px + 33.5 * ((100vw - 320px) / 935));
+  }
+}
+
+.programs-bottom__text {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 1255px) {
+  .programs-bottom__text {
+    margin-top: calc(16px + 24 * ((100vw - 320px) / 935));
+  }
+}
+
+@media (max-width: 1255px) {
+  .programs-bottom__text {
+    margin-bottom: calc(16px + 24 * ((100vw - 320px) / 935));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .programs-bottom__image {
+    display: flex;
+    justify-content: center;
+  }
+  .programs-bottom__image img {
+    width: 80%;
   }
 }
