@@ -830,3 +830,58 @@ body._touch .menu__arrow {
     margin-bottom: calc(16px + 24 * ((100vw - 320px) / 935));
   }
 }
+
+.footer {
+  background: #484f5b;
+  color: #fff;
+  padding-top: 70px;
+  padding-bottom: 60px;
+}
+
+@media (max-width: 1255px) {
+  .footer {
+    padding-top: calc(20px + 50 * ((100vw - 320px) / 935));
+  }
+}
+
+@media (max-width: 1255px) {
+  .footer {
+    padding-bottom: calc(20px + 40 * ((100vw - 320px) / 935));
+  }
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__logo-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer__address {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1255px) {
+  .footer__address {
+    margin-top: calc(10px + 20 * ((100vw - 320px) / 935));
+  }
+}
+
+@media (max-width: 1255px) {
+  .footer__address {
+    margin-bottom: calc(10px + 20 * ((100vw - 320px) / 935));
+  }
+}
